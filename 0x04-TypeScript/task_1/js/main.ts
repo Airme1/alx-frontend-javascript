@@ -8,7 +8,7 @@ interface Teacher {
 
 }
 
-// Director interface to extend Teacher
+// task 2- Director interface to extend Teacher
 interface Directors extends Teacher {
     numberOfReports: number;
 }
@@ -19,12 +19,12 @@ const director1: Directors = {
     location: 'London',
     fullTimeEmployee: true,
     numberOfReports: 17,
-  };
+};
 
-  console.log(director1);
+console.log(director1);
 
 
-  const teacher3: Teacher = {
+const teacher3: Teacher = {
     firstName: 'John',
     fullTimeEmployee: false,
     lastName: 'Doe',
@@ -33,3 +33,10 @@ const director1: Directors = {
 };
 
 console.log(teacher3);
+
+// task 3 function print name with initials
+function printTeacher(firstName: string, lastName: string): string {
+    return `${firstName.charAt(0)}. ${lastName}`
+}
+
+console.log(printTeacher("John", "Doe"))
